@@ -2,7 +2,7 @@ const express = require("express");
 const logger = require("morgan");
 const cors = require("cors");
 
-// const contactsRouter = require("./routes/api/projects");
+// const contactsRouter = require("./routes/api/portfolio");
 
 const app = express();
 
@@ -12,7 +12,7 @@ app.use(logger(formatsLogger));
 app.use(cors());
 app.use(express.json());
 
-// app.use("/api/projects", projectsRouter);
+// app.use("/my-portfolio", projectsRouter);
 
 app.use((req, res) => {
   res.status(404).json({ message: "Not found" });
